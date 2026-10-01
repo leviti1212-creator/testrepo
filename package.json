@@ -1,0 +1,24 @@
+{
+  "name": "apple-deal-finder",
+  "private": true,
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "pnpm -r --parallel --stream run dev",
+    "build": "pnpm -r run build",
+    "test": "pnpm -r run test",
+    "typecheck": "pnpm -r run typecheck",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "db:generate": "pnpm --filter @adf/api run db:generate",
+    "db:migrate": "pnpm --filter @adf/api run db:migrate"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.15",
+    "@types/node": "^26.6.3",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}
